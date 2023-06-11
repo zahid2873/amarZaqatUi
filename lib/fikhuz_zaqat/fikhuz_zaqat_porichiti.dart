@@ -12,6 +12,7 @@ class FikhuzZaqatPorichiti extends StatefulWidget {
 class _FikhuzZaqatPorichitiState extends State<FikhuzZaqatPorichiti> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(140, 118, 90, 1),
@@ -31,7 +32,7 @@ class _FikhuzZaqatPorichitiState extends State<FikhuzZaqatPorichiti> {
 
               },
               child: Container(
-                height: 48,
+                height: size.height*0.06,
                 width: double.infinity,
                 child: ListTile(
                   title: Text("যাকাতের পরিচয়",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF867C5A)),),
@@ -40,35 +41,35 @@ class _FikhuzZaqatPorichitiState extends State<FikhuzZaqatPorichiti> {
               ),
             ),
             Container(
-              height: 48,
+              height: size.height*0.06,
               width: double.infinity,
               child: ListTile(
                 title: Text("যাকাতের হুকুম",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF867C5A)),),
-                trailing: IconButton(onPressed: (){},icon: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),),
+                trailing: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),
               ),
             ),
             Container(
-              height: 48,
+              height: size.height*0.06,
               width: double.infinity,
               child: ListTile(
                 title: Text("যাকাত ফরয হওয়ার শর্ত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF867C5A)),),
-                trailing: IconButton(onPressed: (){},icon: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),),
+                trailing: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),
               ),
             ),
             Container(
-              height: 48,
+              height: size.height*0.06,
               width: double.infinity,
               child: ListTile(
                 title: Text("যাকাতের ফযীলত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF867C5A)),),
-                trailing: IconButton(onPressed: (){},icon: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),),
+                trailing:Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),
               ),
             ),
             Container(
-              height: 48,
+              height: size.height*0.06,
               width: double.infinity,
               child: ListTile(
                 title: Text("যাকাত আদায় না করার পরিণতি",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF867C5A)),),
-                trailing: IconButton(onPressed: (){},icon: Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),),
+                trailing:  Icon(Icons.arrow_forward_ios_rounded,size: 24,color: Color(0xFF867C5A)),
               ),
             ),
 

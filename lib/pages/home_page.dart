@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(140, 118, 90, 1),
@@ -31,36 +32,36 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Container(
-                  height: 56,
+                  height: size.height*0.063,
                   color: Color.fromRGBO(158, 136, 111, 1),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.network("https://www.amarzakat.com/icons/logo.png",height: 50,width: 50,),
+                      Image.network("https://www.amarzakat.com/icons/logo.png",height: size.height*0.09,width: size.width*0.09,),
                       Text("আমার যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
                     ],
                   ),
                 ),
                 SizedBox(height: 5,),
                 ListTile(
-                  leading: Image.asset("images/img1.png",height: 22,width: 22,),
+                  leading: Image.asset("images/img1.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("হোম",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
                   },
                 ),
                 ListTile(
-                  leading: Image.asset("images/Contact.png",height: 22,width: 22,),
+                  leading: Image.asset("images/Contact.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("লেখক ও পরিচালক",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){},
                 ),
                 ListTile(
-                  leading: Image.asset("images/About-Us.png",height: 22,width: 22,),
+                  leading: Image.asset("images/About-Us.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("তাইবাহ একাডেমি",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){},
                 ),
                 ListTile(
-                  leading: Image.asset("images/mobile.png",height: 22,width: 22,),
+                  leading: Image.asset("images/mobile.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("মোবাইল অ্যাপ",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){},
                 ),
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                       elevation: 2,
                       child: Container(
                         padding: EdgeInsets.only(left: 16),
-                        height: 56,
+                        height: size.height *0.056,
                         //color: Colors.red,
                         child: Row(
                           children: [
@@ -90,68 +91,190 @@ class _HomePageState extends State<HomePage> {
         ),
 
       ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        child: Stack(
-         // alignment: AlignmentDirectional.topStart,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: 138.61,
-              width: double.infinity,
-              color: Color.fromRGBO(210, 181, 147, 1),
-              child:
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8,top: 16),
-                        child: Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
-                      ),
-                      Center(
-                          child: Text("[আল-বাকারাহঃ আয়াত ২৭৭]",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 13,color: Color(0xFF000000)),)),
+              height: size.height *0.3,
+              //color: Colors.black,
+              //width: double.infinity,
+              child: Stack(
+               // alignment: AlignmentDirectional.topStart,
+                children: [
+                  Container(
+                    height: size.height *.19,
+                   // width: double.infinity,
+                    color: Color.fromRGBO(210, 181, 147, 1),
+                    child:
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8,top: 16),
+                              child: Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
+                            ),
+                            Center(
+                                child: Text("[আল-বাকারাহঃ আয়াত ২৭৭]",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 13,color: Color(0xFF000000)),)),
 
-                    ],
+                          ],
+                        ),
                   ),
-            ),
-            Positioned(
-              top: 92,
-              left: 15,
+                  Positioned(
+                    //top: size.height * 0.1,
+                    bottom: 0.0,
+                    right: 0.0,
+                    left: 0.0,
+                    //left: 15,
 
-              child: InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>FikhuzZaqat()));
+                    child: GestureDetector(
 
-                },
-                child: Material(
-                  elevation: 2,
-                    color:Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  child: Container(
-                    height: 133,
-                    width: 353,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0xFFFFFFFF),
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>FikhuzZaqat()));
+
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: Material(
+                          elevation: 2,
+                          color:Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          child: Container(
+                            height: size.height * 0.190,
+                            width: size.width * 0.350,
+                            padding: EdgeInsets.all(40),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Color(0xFFFFFFFF),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.network("https://www.amarzakat.com/icons/1FiqhuzZakat.png",height: size.height*0.12,width: size.width*0.12,),
+                                SizedBox(width: 10,),
+                                Text("ফিকহুয যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 22,color: Color(0xFF867C5A)),)
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.network("https://www.amarzakat.com/icons/1FiqhuzZakat.png",height: 56,width: 56,),
-                        SizedBox(width: 10,),
-                        Text("ফিকহুয যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 22,color: Color(0xFF000000)),)
-                      ],
                     ),
-                    ),
-                ),
+                  ),
+                  // Positioned(
+                  //   top: 235,
+                  //   left: 15,
+                  //   child: Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: [
+                  //       Row(
+                  //         children: [
+                  //           Material(
+                  //             elevation: 2,
+                  //             color:Colors.white,
+                  //             borderRadius: BorderRadius.circular(15),
+                  //             child: Container(
+                  //               padding: EdgeInsets.all(5),
+                  //               height: 200,
+                  //               width: 170,
+                  //               decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(15),
+                  //                 color: Color(0xFFFFFFFF),
+                  //               ),
+                  //               child: Column(
+                  //                 mainAxisAlignment: MainAxisAlignment.center,
+                  //                 children: [
+                  //                   Image.network("https://www.amarzakat.com/icons/1FiqhuzZakat.png",height: 48,width: 48,),
+                  //                   SizedBox(width: 10,),
+                  //                   Text("যাকাতুল ফিতর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                  //                 ],
+                  //               ),
+                  //             ),
+                  //           ),
+                  //           SizedBox(width: 10,),
+                  //           Material(
+                  //             elevation: 2,
+                  //             color:Colors.white,
+                  //             borderRadius: BorderRadius.circular(15),
+                  //             child: Container(
+                  //               height: 200,
+                  //               width: 170,
+                  //               decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(15),
+                  //                 color: Color(0xFFFFFFFF),
+                  //               ),
+                  //               child: Column(
+                  //                 mainAxisAlignment: MainAxisAlignment.center,
+                  //                 children: [
+                  //                   Image.network("https://www.amarzakat.com/icons/3ZakatCalculator.png",height: 48,width: 48,),
+                  //                   SizedBox(width: 10,),
+                  //                   Text("প্রশ্নোত্তর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                  //                 ],
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       SizedBox(height: 10,),
+                  //       Row(
+                  //         children: [
+                  //           Material(
+                  //             elevation: 2,
+                  //             color:Colors.white,
+                  //             borderRadius: BorderRadius.circular(15),
+                  //             child: Container(
+                  //               padding: EdgeInsets.all(5),
+                  //               height: 200,
+                  //               width: 170,
+                  //               decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(15),
+                  //                 color: Color(0xFFFFFFFF),
+                  //               ),
+                  //               child: Column(
+                  //                 mainAxisAlignment: MainAxisAlignment.center,
+                  //                 children: [
+                  //                   Image.network("https://www.amarzakat.com/icons/4QnA.png",height: 48,width: 48,),
+                  //                   SizedBox(width: 10,),
+                  //                   Text("যাকাত ক্যালকুলেটর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                  //                 ],
+                  //               ),
+                  //             ),
+                  //           ),
+                  //           SizedBox(width: 10,),
+                  //           Material(
+                  //             elevation: 2,
+                  //             color:Colors.white,
+                  //             borderRadius: BorderRadius.circular(15),
+                  //             child: Container(
+                  //               height: 200,
+                  //               width: 170,
+                  //               decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(15),
+                  //                 color: Color(0xFFFFFFFF),
+                  //               ),
+                  //               child: Column(
+                  //                 mainAxisAlignment: MainAxisAlignment.center,
+                  //                 children: [
+                  //                   Image.network("https://www.amarzakat.com/icons/5ZakatOrganizations.png",height: 48,width: 48,),
+                  //                   SizedBox(width: 10,),
+                  //                   Text("যাকাতের প্রতিষ্ঠান",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                  //                 ],
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ],
+                  //   ),
+                  // )
+                ],
               ),
-              ),
-            Positioned(
-              top: 235,
-              left: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Material(
                         elevation: 2,
@@ -159,8 +282,8 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
                           padding: EdgeInsets.all(5),
-                          height: 200,
-                          width: 170,
+                          height: size.height*.3,
+                          width: size.width *.5-15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: Color(0xFFFFFFFF),
@@ -168,9 +291,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/1FiqhuzZakat.png",height: 48,width: 48,),
+                              Image.network("https://www.amarzakat.com/icons/2ZakatHishab.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
-                              Text("যাকাতুল ফিতর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                              Text("যাকাতুল ফিতর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
                           ),
                         ),
@@ -181,8 +304,8 @@ class _HomePageState extends State<HomePage> {
                         color:Colors.white,
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
-                          height: 200,
-                          width: 170,
+                          height: size.height*.3,
+                          width: size.width *.5-15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: Color(0xFFFFFFFF),
@@ -190,9 +313,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/3ZakatCalculator.png",height: 48,width: 48,),
+                              Image.network("https://www.amarzakat.com/icons/3ZakatCalculator.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
-                              Text("প্রশ্নোত্তর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                              Text("যাকাত ক্যালকুলেটর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
                           ),
                         ),
@@ -208,8 +331,8 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
                           padding: EdgeInsets.all(5),
-                          height: 200,
-                          width: 170,
+                          height: size.height*.3,
+                          width: size.width *.5-15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: Color(0xFFFFFFFF),
@@ -217,9 +340,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/4QnA.png",height: 48,width: 48,),
+                              Image.network("https://www.amarzakat.com/icons/4QnA.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
-                              Text("যাকাত ক্যালকুলেটর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                              Text("প্রশ্নোত্তর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
                           ),
                         ),
@@ -230,8 +353,8 @@ class _HomePageState extends State<HomePage> {
                         color:Colors.white,
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
-                          height: 200,
-                          width: 170,
+                          height: size.height*.3,
+                          width: size.width *.5-15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: Color(0xFFFFFFFF),
@@ -239,9 +362,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/5ZakatOrganizations.png",height: 48,width: 48,),
+                              Image.network("https://www.amarzakat.com/icons/5ZakatOrganizations.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
-                              Text("যাকাতের প্রতিষ্ঠান",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF000000)),)
+                              Text("যাকাতের প্রতিষ্ঠান",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
                           ),
                         ),
@@ -250,7 +373,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
