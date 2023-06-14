@@ -108,10 +108,18 @@ class _HomePageState extends State<HomePage> {
                     color: Color.fromRGBO(210, 181, 147, 1),
                     child:
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 8,top: 16),
-                              child: Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
+                              padding: const EdgeInsets.only(left:10 ,top: 16,right: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে ",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
+                                  Text("এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
+
+                                ],
+                              ),
                             ),
                             Center(
                                 child: Text("[আল-বাকারাহঃ আয়াত ২৭৭]",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 13,color: Color(0xFF000000)),)),
