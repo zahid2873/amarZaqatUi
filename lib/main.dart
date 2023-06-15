@@ -1,6 +1,8 @@
 import 'package:amar_zaqat_ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/splash_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }

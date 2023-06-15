@@ -115,8 +115,8 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে ",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
-                                  Text("এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
+                                  Text("নিশ্চয়ই যারা ঈমান এনেছে, সৎকাজ করেছে, সালাত প্রতিষ্ঠা করেছে এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000),),textAlign: TextAlign.center,maxLines: 2,),
+                                  //Text("এবং যাকাত দিয়েছে, তাদের প্রতিদান রয়েছে তাদের রব-এর নিকট।",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 15,color: Color(0xFF000000)),),
 
                                 ],
                               ),
