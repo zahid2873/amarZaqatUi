@@ -6,6 +6,7 @@ import 'fikhuz_zaqat_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+  static const String routeName = '/home';
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         title: Text("আমার যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
       actions: [
         IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+          Navigator.pushNamed(context, SearchPage.routeName);
         }, icon: Icon(Icons.search,size: 24,))
       ],
       ),
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   leading: Image.asset("images/img1.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("হোম",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                    Navigator.pushNamed(context, HomePage.routeName);
                   },
                 ),
                 ListTile(
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                     child: GestureDetector(
 
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>FikhuzZaqat()));
+                        Navigator.pushNamed(context, FikhuzZaqat.routeName);
 
                       },
                       child: Padding(

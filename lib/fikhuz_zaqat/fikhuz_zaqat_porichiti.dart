@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 class FikhuzZaqatPorichiti extends StatefulWidget {
   const FikhuzZaqatPorichiti({Key? key}) : super(key: key);
+  static const String routeName = '/fikhuz_zaqat_porichiti';
+
 
   @override
   State<FikhuzZaqatPorichiti> createState() => _FikhuzZaqatPorichitiState();
@@ -28,7 +30,7 @@ class _FikhuzZaqatPorichitiState extends State<FikhuzZaqatPorichiti> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>FikhuzZaqatPorichoy()));
+                Navigator.pushNamed(context, FikhuzZaqatPorichoy.routeName);
 
               },
               child: Container(

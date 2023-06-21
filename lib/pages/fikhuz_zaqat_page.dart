@@ -5,6 +5,8 @@ import '../fikhuz_zaqat/fikhuz_zaqat_porichiti.dart';
 
 class FikhuzZaqat extends StatefulWidget {
   const FikhuzZaqat({Key? key}) : super(key: key);
+  static const String routeName = '/fikhuz_zaqat';
+
 
   @override
   State<FikhuzZaqat> createState() => _FikhuzZaqatState();
@@ -20,7 +22,7 @@ class _FikhuzZaqatState extends State<FikhuzZaqat> {
         title: Text("ফিকহুয যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+            Navigator.pushNamed(context, SearchPage.routeName);
           }, icon: Icon(Icons.search,size: 24,))
         ],
       ),
@@ -29,7 +31,7 @@ class _FikhuzZaqatState extends State<FikhuzZaqat> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>FikhuzZaqatPorichiti()));
+                Navigator.pushNamed(context, FikhuzZaqatPorichiti.routeName);
               },
               child: Container(
                 height: size.height * 0.06,

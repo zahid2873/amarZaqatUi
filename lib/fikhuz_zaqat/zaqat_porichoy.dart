@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 class FikhuzZaqatPorichoy extends StatefulWidget {
   const FikhuzZaqatPorichoy({Key? key}) : super(key: key);
+  static const String routeName = '/fikhuz_zaqat_porichoy';
+
 
   @override
   State<FikhuzZaqatPorichoy> createState() => _FikhuzZaqatPorichoyState();
@@ -17,7 +19,7 @@ class _FikhuzZaqatPorichoyState extends State<FikhuzZaqatPorichoy> {
         title: Text("যাকাতের পরিচয়",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+            Navigator.pushNamed(context, SearchPage.routeName);
           }, icon: Icon(Icons.search,size: 24,)),
           IconButton(onPressed: (){
             bottomSheet();
