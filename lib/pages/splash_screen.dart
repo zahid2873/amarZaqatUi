@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
-        child: Image.network("https://www.amarzakat.com/icons/logo.png",height: size.height*0.15,width: size.width*0.15,),
+        child: Image.asset("images/logo.png",height: size.height*0.15,width: size.width*0.15,),
       ),
     );
   }

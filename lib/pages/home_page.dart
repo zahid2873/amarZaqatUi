@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.network("https://www.amarzakat.com/icons/logo.png",height: size.height*0.09,width: size.width*0.09,),
+                      Image.asset("images/logo.png",height: size.height*0.09,width: size.width*0.09,),
                       Text("আমার যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
                     ],
                   ),
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network("https://www.amarzakat.com/icons/1FiqhuzZakat.png",height: size.height*0.12,width: size.width*0.12,),
+                                Image.asset("images/1FiqhuzZakat.png",height: size.height*0.12,width: size.width*0.12,),
                                 SizedBox(width: 10,),
                                 Text("ফিকহুয যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 22,color: Color(0xFF867C5A)),)
                               ],
@@ -300,7 +300,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/2ZakatHishab.png",height: size.height*0.1,width: size.width*0.1,),
+                              Image.asset("images/2ZakatHishab.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
                               Text("যাকাতুল ফিতর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
@@ -322,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/3ZakatCalculator.png",height: size.height*0.1,width: size.width*0.1,),
+                              Image.asset("images/3ZakatCalculator.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
                               Text("যাকাত ক্যালকুলেটর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
@@ -349,7 +349,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/4QnA.png",height: size.height*0.1,width: size.width*0.1,),
+                              Image.asset("images/4QnA.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
                               Text("প্রশ্নোত্তর",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
@@ -371,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://www.amarzakat.com/icons/5ZakatOrganizations.png",height: size.height*0.1,width: size.width*0.1,),
+                              Image.asset("images/5ZakatOrganizations.png",height: size.height*0.1,width: size.width*0.1,),
                               SizedBox(width: 10,),
                               Text("যাকাতের প্রতিষ্ঠান",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 17,color: Color(0xFF867C5A)),)
                             ],
