@@ -4,15 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'fikhuz_zaqat_page.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
   static const String routeName = '/home';
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -48,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                   leading: Image.asset("images/img1.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("হোম",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){
-                    Navigator.pushNamed(context, HomePage.routeName);
+                    Navigator.pushNamed(context, routeName);
                   },
                 ),
                 ListTile(

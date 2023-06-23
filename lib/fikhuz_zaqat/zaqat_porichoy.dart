@@ -5,7 +5,6 @@ class FikhuzZaqatPorichoy extends StatefulWidget {
   const FikhuzZaqatPorichoy({Key? key}) : super(key: key);
   static const String routeName = '/fikhuz_zaqat_porichoy';
 
-
   @override
   State<FikhuzZaqatPorichoy> createState() => _FikhuzZaqatPorichoyState();
 }

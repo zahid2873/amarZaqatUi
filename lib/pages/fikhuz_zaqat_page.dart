@@ -3,16 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../fikhuz_zaqat/fikhuz_zaqat_porichiti.dart';
 
-class FikhuzZaqat extends StatefulWidget {
+class FikhuzZaqat extends StatelessWidget {
   const FikhuzZaqat({Key? key}) : super(key: key);
   static const String routeName = '/fikhuz_zaqat';
 
 
-  @override
-  State<FikhuzZaqat> createState() => _FikhuzZaqatState();
-}
-
-class _FikhuzZaqatState extends State<FikhuzZaqat> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

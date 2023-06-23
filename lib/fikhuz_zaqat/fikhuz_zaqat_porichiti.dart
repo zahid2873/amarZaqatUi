@@ -2,16 +2,11 @@ import 'package:amar_zaqat_ui/fikhuz_zaqat/zaqat_porichoy.dart';
 import 'package:amar_zaqat_ui/pages/search_page.dart';
 import 'package:flutter/material.dart';
 
-class FikhuzZaqatPorichiti extends StatefulWidget {
+class FikhuzZaqatPorichiti extends StatelessWidget {
   const FikhuzZaqatPorichiti({Key? key}) : super(key: key);
   static const String routeName = '/fikhuz_zaqat_porichiti';
 
 
-  @override
-  State<FikhuzZaqatPorichiti> createState() => _FikhuzZaqatPorichitiState();
-}
-
-class _FikhuzZaqatPorichitiState extends State<FikhuzZaqatPorichiti> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
