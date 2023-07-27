@@ -1,5 +1,6 @@
 import 'package:amar_zaqat_ui/pages/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../fikhuz_zaqat/fikhuz_zaqat_porichiti.dart';
 
@@ -18,6 +19,9 @@ class FikhuzZaqat extends StatelessWidget {
         actions: [
           IconButton(onPressed: (){
             Navigator.pushNamed(context, SearchPage.routeName);
+            Get.to(()=>SearchPage(),transition: Transition.fade, duration: Duration(seconds: 0) );
+
+            // Navigator.pushReplacementNamed(context, SearchPage.routeName);
           }, icon: Icon(Icons.search,size: 24,))
         ],
       ),
@@ -26,7 +30,11 @@ class FikhuzZaqat extends StatelessWidget {
           children: [
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, FikhuzZaqatPorichiti.routeName);
+                 Navigator.pushNamed(context, FikhuzZaqatPorichiti.routeName);
+                  //Navigator.pushReplacementNamed(context, FikhuzZaqatPorichiti.routeName);
+                 Get.to(()=>FikhuzZaqatPorichiti(),transition: Transition.fade, duration: Duration(seconds: 0) );
+
+
               },
               child: Container(
                 height: size.height * 0.06,

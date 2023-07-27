@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    Timer(const Duration(seconds: 3), ()=> Navigator.pushNamed(context, HomePage.routeName));
+    Timer(const Duration(seconds: 3), ()=> Navigator.pushReplacementNamed(context, HomePage.routeName));
     super.initState();
   }
   @override
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
-        child: Image.asset("images/logo.png",height: size.height*0.15,width: size.width*0.15,),
+        child: Image.asset("images/logo.png",height: size.height*0.20,width: size.width*0.20,),
       ),
     );
   }

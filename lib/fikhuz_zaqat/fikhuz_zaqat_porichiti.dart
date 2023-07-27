@@ -1,6 +1,7 @@
 import 'package:amar_zaqat_ui/fikhuz_zaqat/zaqat_porichoy.dart';
 import 'package:amar_zaqat_ui/pages/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FikhuzZaqatPorichiti extends StatelessWidget {
   const FikhuzZaqatPorichiti({Key? key}) : super(key: key);
@@ -16,7 +17,9 @@ class FikhuzZaqatPorichiti extends StatelessWidget {
         title: Text("যাকাতের পরিচিতি",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+            //Navigator.pushNamed(context, SearchPage.routeName);
+            Get.to(()=>SearchPage(),transition: Transition.fade, duration: Duration(seconds: 0) );
+            //Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
           }, icon: Icon(Icons.search,size: 24,))
         ],
       ),
@@ -25,7 +28,8 @@ class FikhuzZaqatPorichiti extends StatelessWidget {
           children: [
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, FikhuzZaqatPorichoy.routeName);
+                //Navigator.pushNamed(context, FikhuzZaqatPorichoy.routeName);
+                Get.to(()=>FikhuzZaqatPorichoy(),transition: Transition.fade, duration: Duration(seconds: 0) );
 
               },
               child: Container(

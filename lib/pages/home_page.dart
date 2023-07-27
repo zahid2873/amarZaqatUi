@@ -1,5 +1,6 @@
 import 'package:amar_zaqat_ui/pages/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'fikhuz_zaqat_page.dart';
@@ -17,7 +18,9 @@ class HomePage extends StatelessWidget {
         title: Text("আমার যাকাত",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
       actions: [
         IconButton(onPressed: (){
-          Navigator.pushNamed(context, SearchPage.routeName);
+          //Navigator.pushNamed(context, SearchPage.routeName);
+          Get.to(()=>SearchPage(),transition: Transition.fade, duration: Duration(seconds: 0) );
+
         }, icon: Icon(Icons.search,size: 24,))
       ],
       ),
@@ -43,7 +46,11 @@ class HomePage extends StatelessWidget {
                   leading: Image.asset("images/img1.png",height: size.height*0.06,width: size.width*0.06,),
                   title: Text("হোম",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 18,color: Color(0xFF000000))),
                   onTap: (){
-                    Navigator.pushNamed(context, routeName);
+                    Navigator.pop(context);
+                    //Navigator.pushNamed(context, routeName);
+                    //Get.to(()=>HomePage(),transition: Transition.fade, duration: Duration(seconds: 1) );
+
+
                   },
                 ),
                 ListTile(
@@ -133,7 +140,10 @@ class HomePage extends StatelessWidget {
                     child: GestureDetector(
 
                       onTap: (){
-                        Navigator.pushNamed(context, FikhuzZaqat.routeName);
+                       // Navigator.pushNamed(context, FikhuzZaqat.routeName);
+                       //   Navigator.pushReplacementNamed(context, FikhuzZaqat.routeName);
+                        Get.to(()=>FikhuzZaqat(),transition: Transition.fade, duration: Duration(seconds: 0) );
+
 
                       },
                       child: Padding(

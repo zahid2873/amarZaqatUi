@@ -1,5 +1,6 @@
 import 'package:amar_zaqat_ui/pages/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FikhuzZaqatPorichoy extends StatefulWidget {
   const FikhuzZaqatPorichoy({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class _FikhuzZaqatPorichoyState extends State<FikhuzZaqatPorichoy> {
         title: Text("যাকাতের পরিচয়",style: TextStyle(fontFamily: 'Kalpurush',fontSize: 20,color: Color(0xFFFFFFFF)),),
         actions: [
           IconButton(onPressed: (){
-            Navigator.pushNamed(context, SearchPage.routeName);
+            Get.to(()=>SearchPage(),transition: Transition.fade, duration: Duration(seconds: 0) );
+            //Navigator.pushNamed(context, SearchPage.routeName);
           }, icon: Icon(Icons.search,size: 24,)),
           IconButton(onPressed: (){
             bottomSheet();
